@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "7a220f6a-c4f7-46d1-896c-d7c590ac2258",
+		"name": "Bim",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956952"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andrés",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Oliva",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "andresoliva",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "andresoliva@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "contraseña_segura",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1234567890",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "andresoliva@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "contraseña_segura",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Uusarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/67b2b1d970d91cfbf02c75e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"67b2b1d970d91cfbf02c75e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andrés Updated",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Oliva Updated",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0987654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/67b2c13ef06ea4c934aa41d1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"67b2c13ef06ea4c934aa41d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Password User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "contraseña_segura",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "nueva_contraseña_segura",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/password/67b2c13ef06ea4c934aa41d1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"password",
+								"67b2c13ef06ea4c934aa41d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/usuarios/67b2c13ef06ea4c934aa41d1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"usuarios",
+								"67b2c13ef06ea4c934aa41d1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mouses",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Todo tipo de mouses para computadoras",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/categoria/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"categoria",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categoria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/categoria/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"categoria",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID Categoria",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/categoria/67b2c16ef06ea4c934aa41d9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"categoria",
+								"67b2c16ef06ea4c934aa41d9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mouses y teclados",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Mouses y teclados para todas las marcas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/categoria/67b2c16ef06ea4c934aa41d9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"categoria",
+								"67b2c16ef06ea4c934aa41d9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyYjFkOTcwZDkxY2ZiZjAyYzc1ZTkiLCJ1c2VybmFtZSI6ImFuZHJlc29saXZhIiwibmFtZSI6IkFuZHLDqXMiLCJpYXQiOjE3Mzk3NjQxOTksImV4cCI6MTczOTc3NDk5OX0.X5bNJEDWUwePkQK8VYRHIM70wvODsrcOPjRkx7qxTuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/categoria/67b2c16ef06ea4c934aa41d9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"categoria",
+								"67b2c16ef06ea4c934aa41d9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
